@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  code: MyString
+  gr: MyString
+  m1: MyString
+  m2: MyString
+  m3: MyString
+  m4: MyString
+  m5: MyString
+  t1: MyString
+  t2: MyString
+  t3: MyString
+  t4: MyString
+  t5: MyString
+
+two:
+  code: MyString
+  gr: MyString
+  m1: MyString
+  m2: MyString
+  m3: MyString
+  m4: MyString
+  m5: MyString
+  t1: MyString
+  t2: MyString
+  t3: MyString
+  t4: MyString
+  t5: MyString
