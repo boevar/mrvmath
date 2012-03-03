@@ -1,6 +1,6 @@
 Mrvmath::Application.routes.draw do
   resources :skeds
-
+  resources :list
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

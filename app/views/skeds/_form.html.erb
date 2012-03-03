@@ -1,8 +1,8 @@
+<div id="wrapper">
 <%= form_for(@sked) do |f| %>
   <% if @sked.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@sked.errors.count, "error") %> prohibited this sked from being saved:</h2>
-
       <ul>
       <% @sked.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -11,55 +11,63 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :code %><br />
+
+ <div id="header" class="field">
+    <b>Name Code</b>
     <%= f.text_field :code %>
+    <b>Grade</b>
+	<%= select 'sked', 'gr', %w(9 10 11 12), :include_blank => true %>
+ </div>
+ <div id="content-box1" class="field">
+    <b><center>Mon-Tues-Wed</center></b>
+    <p>
+	<b>07:00-08:30</b>
+	<%= select 'sked', 'm1', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>08:31-10:01</b>
+	<%= select 'sked', 'm2', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>10:02-12:02</b>
+	<%= select 'sked', 'm3', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>01:04-02:34</b>
+	<%= select 'sked', 'm4', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>02:35-04:05</b>
+	<%= select 'sked', 'm5', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
   </div>
-  <div class="field">
-    <%= f.label :gr %><br />
-    <%= f.text_field :gr %>
-  </div>
-  <div class="field">
-    <%= f.label :m1 %><br />
-    <%= f.text_field :m1 %>
-  </div>
-  <div class="field">
-    <%= f.label :m2 %><br />
-    <%= f.text_field :m2 %>
-  </div>
-  <div class="field">
-    <%= f.label :m3 %><br />
-    <%= f.text_field :m3 %>
-  </div>
-  <div class="field">
-    <%= f.label :m4 %><br />
-    <%= f.text_field :m4 %>
-  </div>
-  <div class="field">
-    <%= f.label :m5 %><br />
-    <%= f.text_field :m5 %>
-  </div>
-  <div class="field">
-    <%= f.label :t1 %><br />
-    <%= f.text_field :t1 %>
-  </div>
-  <div class="field">
-    <%= f.label :t2 %><br />
-    <%= f.text_field :t2 %>
-  </div>
-  <div class="field">
-    <%= f.label :t3 %><br />
-    <%= f.text_field :t3 %>
-  </div>
-  <div class="field">
-    <%= f.label :t4 %><br />
-    <%= f.text_field :t4 %>
-  </div>
-  <div class="field">
-    <%= f.label :t5 %><br />
-    <%= f.text_field :t5 %>
-  </div>
-  <div class="actions">
+ 
+ <div id="content-box2" class="field">
+    <b><center>Tues-Thurs</center>
+	<p>
+    <b>07:00-08:30</b>
+	<%= select 'sked', 't1', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>08:31-10:01</b>
+	<%= select 'sked', 't2', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>10:02-12:02</b>
+	<%= select 'sked', 't3', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>01:04-02:34</b>
+	<%= select 'sked', 't4', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+ 
+    <p>
+    <b>02:35-04:05</b>
+	<%= select 'sked', 't5', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+ </div>
+ 
+  <div id="footer" class="actions">
     <%= f.submit %>
   </div>
+ 
+ 
+
 <% end %>

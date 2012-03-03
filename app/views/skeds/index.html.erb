@@ -1,22 +1,27 @@
-<h1>Listing skeds</h1>
+<div align="center">
+<h1>Class Schedules</h1>
 
-<table>
-  <tr>
+<table border="1" cellpadding="0" cellspacing="0" width="90%" >
+  <tr style="background-color:blue;color:white">
+    <th colspan="2"></th>
+	<th colspan="5">Mon-Wed-Fri</th>
+	<th colspan="5">Tues-Thurs</th>
+	<th colspan="2"></th>
+  </tr>
+  <tr style="background-color:blue;color:white">
     <th>Code</th>
     <th>Gr</th>
-    <th>M1</th>
-    <th>M2</th>
-    <th>M3</th>
-    <th>M4</th>
-    <th>M5</th>
-    <th>T1</th>
-    <th>T2</th>
-    <th>T3</th>
-    <th>T4</th>
-    <th>T5</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>7:00-8:30</th>
+    <th>8:31-10:01</th>
+    <th>10:02-12:02</th>
+    <th>1:04-2:34</th>
+    <th>2:35-4:05</th>
+    <th>7:00-8:30</th>
+    <th>8:31-10:01</th>
+    <th>10:02-12:02</th>
+    <th>1:04-2:34</th>
+    <th>2:35-4:05</th>
+	<th colspan="2">Actions</th>
   </tr>
 
 <% @skeds.each do |sked| %>
@@ -33,13 +38,14 @@
     <td><%= sked.t3 %></td>
     <td><%= sked.t4 %></td>
     <td><%= sked.t5 %></td>
-    <td><%= link_to 'Show', sked %></td>
-    <td><%= link_to 'Edit', edit_sked_path(sked) %></td>
-    <td><%= link_to 'Destroy', sked, :confirm => 'Are you sure?', :method => :delete %></td>
+    
+    <td><%= link_to 'Change', edit_sked_path(sked) %></td>
+    <td><%= link_to 'Withdraw', sked, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Sked', new_sked_path %>
+<%= link_to 'Add New Student', new_sked_path %>
+</div>
