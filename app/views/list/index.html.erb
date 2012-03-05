@@ -1,7 +1,7 @@
 <div align="center">
-<h3>Class Schedule (Lab1 - Science; Lab2 - Math; Lab3 - Social Studies; Lab4 - English/Writing; Lab5 - Reading; Rm122 - Employability)</h3>
-
-<table border="1" cellpadding="0" cellspacing="0" width="90%">
+<h1>Class Schedules</h1>
+<h3><b>Lab1 - Science, Lab2 - Math, Lab3 - Social Studies, Lab4 - English/Writing, Lab5 - Reading, Rm122 - Employability</b></h3>
+<table border="1" cellpadding="0" cellspacing="0" width="90%" >
   <tr style="background-color:blue;color:white">
     <th colspan="2"></th>
 	<th colspan="5">Monday-Wednesday-Friday</th>
@@ -9,37 +9,38 @@
   </tr>
   <tr style="background-color:blue;color:white">
     <th>Code</th>
-	<th>Grade</th>
-    <th>7:00-8:30</th>
-    <th>8:31-10:01</th>
-    <th>10:02-12:02</th>
-	<th>1:04-2:34</th>
-	<th>2:35-4:05</th>
+    <th>Gr</th>
     <th>7:00-8:30</th>
     <th>8:31-10:01</th>
     <th>10:02-12:02</th>
     <th>1:04-2:34</th>
-    <th>2:35-4:05</th>	
+    <th>2:35-4:05</th>
+    <th>7:00-8:30</th>
+    <th>8:31-10:01</th>
+    <th>10:02-12:02</th>
+    <th>1:04-2:34</th>
+    <th>2:35-4:05</th>
+	
   </tr>
 
-<% @skeds.each do |sked| %>
-  <tr>
-    <td align="center" width="5%"><%= sked.code %></td>
-	<td align="center" width="5%"><%= sked.gr %></td>
-    <td align="center" width="5%"><%= sked.m1 %></td>
-    <td align="center" width="5%"><%= sked.m2 %></td>
-    <td align="center" width="5%"><%= sked.m3 %></td>
-    <td align="center" width="5%"><%= sked.m4 %></td>
-    <td align="center" width="5%"><%= sked.m5 %></td>	
-    <td align="center" width="5%"><%= sked.t1 %></td>
-    <td align="center" width="5%"><%= sked.t2 %></td>
-    <td align="center" width="5%"><%= sked.t3 %></td>
-    <td align="center" width="5%"><%= sked.t4 %></td>
-    <td align="center" width="5%"><%= sked.t5 %></td>
+<% @lists.each do |lists| %>
+  <tr align="center">
+    <td><%= lists.code %></td>
+    <td><%= lists.gr %></td>
+    <td><%= lists.m1 %></td>
+    <td><%= lists.m2 %></td>
+    <td><%= lists.m3 %></td>
+    <td><%= lists.m4 %></td>
+    <td><%= lists.m5 %></td>
+    <td><%= lists.t1 %></td>
+    <td><%= lists.t2 %></td>
+    <td><%= lists.t3 %></td>
+    <td><%= lists.t4 %></td>
+    <td><%= lists.t5 %></td>
   </tr>
 <% end %>
 </table>
-<h5><center>Created/maintained by: BVargas</center></h5>
-<br />
-</div>
 
+<br />
+<p><center>Designer/developer: Mr Vargas</center></p> 
+</div>

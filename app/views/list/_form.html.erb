@@ -1,3 +1,4 @@
+<div id="wrapper">
 <%= form_for(@sked) do |f| %>
   <% if @sked.errors.any? %>
     <div id="error_explanation">
@@ -10,51 +11,63 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+
+ <div id="header" class="field">
+    <b>Name Code</b>
+    <%= f.text_field :code %>
+    <b>Grade</b>
+	<%= select 'sked', 'gr', %w(9 10 11 12), :include_blank => true %>
+ </div>
+ <div id="content-box1" class="field">
+    <b><center>Mon-Tues-Wed</center></b>
+    <p>
+	<b>07:00-08:30</b>
+	<%= select 'sked', 'm1', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>08:31-10:01</b>
+	<%= select 'sked', 'm2', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>10:02-12:02</b>
+	<%= select 'sked', 'm3', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>01:04-02:34</b>
+	<%= select 'sked', 'm4', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>02:35-04:05</b>
+	<%= select 'sked', 'm5', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
   </div>
-  <div class="field">
-    <b>M-W-F 7:00-8:30</b>
-	<%= select 'sked', 'mwf1', %w(None 1Employability 1English 1Math 1Reading 1Science 1SocStudies 1Writing) %>
-  </div>
-  <div class="field">
-    <b>M-W-F 8:31-10:01</b>
-	<%= select 'sked', 'mwf2', %w(None 2Employability 2English 2Math 2Reading 2Science 2SocStudies 2Writing) %>
-  </div>
-  <div class="field">
-    <b>M-W-F 10:02-12:02</b>
-   	<%= select 'sked', 'mwf3', %w(None 3Employability 3English 3Math 3Reading 3Science 3SocStudies 3Writing) %>
-  </div>
-    <div class="field">
-    <b>M-W-F 1:04-2:34</b>
-   	<%= select 'sked', 'mwf4', %w(None 4Employability 4English 4Math 4Reading 4Science 4SocStudies 4Writing) %>
-  </div>
-    <div class="field">
-    <b>M-W-F 2:35-4:05</b>
-   	<%= select 'sked', 'mwf5', %w(None 5Employability 5English 5Math 5Reading 5Science 5SocStudies 5Writing) %>
-  </div>
-  <div class="field">
-    <b>T-Th 7:00-8:30</b>
-	<%= select 'sked', 'tth1', %w(None 1Employability 1English 1Math 5Reading 1Science 1SocStudies 1Writing) %>
-  </div>
-  <div class="field">
-    <b>T-Th 8:31-10:01</b>
-	<%= select 'sked', 'tth2', %w(None 2Employability 2English 2Math 2Reading 2Science 2SocStudies 2Writing) %>
-  </div>
-  <div class="field">
-    <b>T-Th 10:02-12:02</b>
-	<%= select 'sked', 'tth3', %w(None 3Employability 3English 3Math 3Reading 3Science 3SocStudies 3Writing) %>
-  </div>
-    <div class="field">
-    <b>T-Th 1:04-2:34</b>
-	<%= select 'sked', 'tth4', %w(None 4Employability 4English 4Math 4Reading 4Science 4SocStudies 4Writing) %>
-  </div>
-    <div class="field">
-    <b>T-Th 2:35-4:05</b>
-	<%= select 'sked', 'tth5', %w(None 5Employability 5English 5Math 5Reading 5Science 5SocStudies 5Writing) %>
-  </div>
-  <div class="actions">
+ 
+ <div id="content-box2" class="field">
+    <b><center>Tues-Thurs</center>
+	<p>
+    <b>07:00-08:30</b>
+	<%= select 'sked', 't1', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>08:31-10:01</b>
+	<%= select 'sked', 't2', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>10:02-12:02</b>
+	<%= select 'sked', 't3', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+  
+    <p>
+    <b>01:04-02:34</b>
+	<%= select 'sked', 't4', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+ 
+    <p>
+    <b>02:35-04:05</b>
+	<%= select 'sked', 't5', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
+ </div>
+ 
+  <div id="footer" class="actions">
     <%= f.submit %>
   </div>
+ 
+ 
+
 <% end %>

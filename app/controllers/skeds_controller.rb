@@ -1,14 +1,19 @@
 class SkedsController < ApplicationController
   # GET /skeds
   # GET /skeds.xml
+  
   def index
-    @skeds = Sked.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @skeds }
-    end
+  @skeds = Sked.search(params[:search])
   end
+    
+  #def index
+  #  @skeds = Sked.all
+
+  #  respond_to do |format|
+  #    format.html # index.html.erb
+  #    format.xml  { render :xml => @skeds }
+  #  end
+  # end
 
   # GET /skeds/1
   # GET /skeds/1.xml
