@@ -48,8 +48,8 @@
     <td><%= sked.t4 %></td>
     <td><%= sked.t5 %></td>
     
-    <td><%= link_to 'Change', edit_sked_path(sked) %></td>
-    <td><%= link_to 'Withdraw', sked, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Change Entries', edit_sked_path(sked) %></td>
+	<td><%= link_to 'Withdraw', sked, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
