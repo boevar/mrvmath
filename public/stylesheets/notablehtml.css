@@ -36,7 +36,7 @@
 		border:1px solid #bbb;
 		position:absolute;
 		margin-top:10px;
-		height:190px;
+		height:235px;
 	}
 	#content-box1 {
 		margin-left:200px;
@@ -46,14 +46,12 @@
 		margin-left:495px;
 		width:250px;
 	}
-
-	
 	#footer {
 		float:left;
-		margin-top:250px;
-		margin-bottom:10px;
-		padding:10px;
 		border:1px solid #bbb;
+	    margin-top:300px;
+		
+		padding:10px;
 		width:878px;
 	}
 	#bottom {

@@ -1,3 +1,11 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="../../stylesheets/base.css" type="text/css" media="screen" charset="utf-8" />  
+</head>
+<body>
 <div id="wrapper">
 <%= form_for(@sked) do |f| %>
   <% if @sked.errors.any? %>
@@ -10,8 +18,6 @@
       </ul>
     </div>
   <% end %>
-
-
  <div id="header" class="field">
     <b>Name Code</b>
     <%= f.text_field :code %>
@@ -23,51 +29,42 @@
     <p>
 	<b>07:00-08:30</b>
 	<%= select 'sked', 'm1', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
-  
     <p>
     <b>08:31-10:01</b>
 	<%= select 'sked', 'm2', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
-  
     <p>
     <b>10:02-12:02</b>
 	<%= select 'sked', 'm3', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
-  
     <p>
     <b>01:04-02:34</b>
 	<%= select 'sked', 'm4', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
-  
     <p>
     <b>02:35-04:05</b>
 	<%= select 'sked', 'm5', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
   </div>
- 
  <div id="content-box2" class="field">
     <b><center>Tues-Thurs</center>
 	<p>
     <b>07:00-08:30</b>
 	<%= select 'sked', 't1', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
-  
     <p>
     <b>08:31-10:01</b>
 	<%= select 'sked', 't2', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
-  
     <p>
     <b>10:02-12:02</b>
 	<%= select 'sked', 't3', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
-  
     <p>
     <b>01:04-02:34</b>
 	<%= select 'sked', 't4', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
- 
     <p>
     <b>02:35-04:05</b>
 	<%= select 'sked', 't5', %w(Employ English Math Reading Science SocStudies Writing), :include_blank => true %></p>
  </div>
+ <div id="footer" class="actions">
+    <center><%= f.submit %></center>
+ </div>
  
-  <div id="footer" class="actions">
-    <%= f.submit %>
-  </div>
- 
- 
-
 <% end %>
+
+</body>
+</html>
